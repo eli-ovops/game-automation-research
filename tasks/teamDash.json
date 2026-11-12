@@ -1,0 +1,92 @@
+{
+    "task": [
+        {
+            "name": "小队突袭",
+            "entry": "team_dash",
+            "default_check": true,
+            "description": "组织里有人用和自己一样忍者时,建议关闭借组织助战",
+            "group": [
+                "daily"
+            ],
+            "option": [
+                "借组织助战",
+                "小队突袭处理自动战斗",
+                "小队突袭出错重启"
+            ]
+        }
+    ],
+    "option": {
+        "借组织助战": {
+            "type": "switch",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "team_dash_invite_page": {
+                            "next": [
+                                "team_dash_invite_ninja",
+                                "[JumpBack]can_not_invite",
+                                "dash_or_exit",
+                                "retry_failed"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "team_dash_invite_page": {
+                            "next": [
+                                "dash_or_exit",
+                                "retry_failed"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "小队突袭处理自动战斗": {
+            "type": "switch",
+            "description": "小队突袭里面开着自动战斗,表现为一进入战斗就自动战斗;这个自动战斗会保留到下一局.如果不清楚账号是否开着自动战斗,此时开启这个选项",
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "team_dash_not_in_auto_battle": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes"
+                }
+            ],
+            "default_case": "No"
+        },
+        "小队突袭出错重启": {
+            "type": "switch",
+            "description": "如果小队突袭总是响应超时,开启这个选项",
+            "cases": [
+                {
+                    "name": "No"
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "check_in_team_dash_sweep": {
+                            "next": [
+                                "team_dash_battle_tips",
+                                "check_not_in_team_dash_sweep",
+                                "[JumpBack]team_dash_not_in_auto_battle",
+                                "check_in_team_dash_sweep",
+                                "[JumpBack]team_dash_sweep_win"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "default_case": "No"
+        }
+    }
+}

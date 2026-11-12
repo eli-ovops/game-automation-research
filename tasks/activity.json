@@ -1,0 +1,12 @@
+{
+    "task": [
+        {
+            "name": "月签到和一乐拉面",
+            "entry": "activity",
+            "default_check": true,
+            "group": [
+                "daily"
+            ]
+        }
+    ]
+}

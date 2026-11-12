@@ -1,0 +1,12 @@
+{
+    "task": [
+        {
+            "name": "修罗副本",
+            "entry": "asura_instance",
+            "description": "忍者不要特效太多的",
+            "group": [
+                "progression"
+            ]
+        }
+    ]
+}

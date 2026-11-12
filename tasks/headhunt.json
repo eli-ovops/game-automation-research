@@ -1,0 +1,12 @@
+{
+    "task": [
+        {
+            "name": "免费招募",
+            "entry": "headhunt",
+            "default_check": true,
+            "group": [
+                "daily"
+            ]
+        }
+    ]
+}
