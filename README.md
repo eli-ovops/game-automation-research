@@ -1,35 +1,35 @@
-# game automation research
+# Maa Auto Naruto: Research Copy
 
-game automation research 的第三方参考资料与来源索引。
+**A reference copy of a game-automation and OCR project retained for local study, with upstream licensing and attribution preserved.**
 
-GitHub：[eli-ovops/game-automation-research](https://github.com/eli-ovops/game-automation-research)
+## What you will find
 
-## 内容
+A reference workspace for studying an upstream project. Its original authorship, licenses and notices remain in place; this copy is not presented as a newly authored replacement.
 
-本次公开副本包含 1008 个来源文件。
+## Start here
 
-- [`DISCLAIMER.md`](DISCLAIMER.md)
-- [`DependencySetup_依赖库安装_mac.sh`](DependencySetup_%E4%BE%9D%E8%B5%96%E5%BA%93%E5%AE%89%E8%A3%85_mac.sh)
-- [`LICENSE`](LICENSE)
-- [`MFAAvalonia.deps.json`](MFAAvalonia.deps.json)
-- [`MFAAvalonia.runtimeconfig.json`](MFAAvalonia.runtimeconfig.json)
-- [`ORIGINAL_README.md`](ORIGINAL_README.md)
-- [`deploy_python_env_linux.sh`](deploy_python_env_linux.sh)
-- [`get_cli.sh`](get_cli.sh)
-- [`interface.json`](interface.json)
-- [`requirements.txt`](requirements.txt)
+- [Original project guide](ORIGINAL_README.md)
+- [Project guide](resource/base/model/ocr/README.md)
+- [Working note 3](DISCLAIMER.md)
+- [Complete source inventory](SOURCE_MANIFEST.csv)
 
-文件类型：.py（644）、.h（264）、.json（61）、.md（16）、.txt（11）、.sh（4）、.c（3）、(no extension)（2）。
+## Current scope
 
-## 阅读方式
+This snapshot includes 1008 source files. Original media, databases, private account records and other unprocessed attachments were not included in this text-and-source release.
 
-按主题说明、研究记录和相关程序阅读；保留当时的探索状态与已知缺口。
+This update improves the English presentation. It does not rerun the project, install a skill, reproduce an old test, or establish production readiness. Some original working documents retain their source language; machine-specific paths or setup assumptions may still need adaptation.
 
-## 来源与许可
+## Sources and license
 
-保留原有上游许可证和署名；相关源码按仓库内既有许可使用。新增发布介绍的许可单独列在 LICENSE.publication-notes。
+The original source keeps the license and attribution supplied with the package. See the [retained license](LICENSE) and original notices. New presentation notes, where provided, are licensed separately; they do not relicense upstream work.
 
-来源文件中记录的公开 GitHub 链接（不表示已逐项独立验证）：
+The license for the added presentation notes is retained in [LICENSE.publication-notes](LICENSE.publication-notes).
+
+<details>
+<summary>Reference links retained from the source notes</summary>
+
+These links were present in the project material; they have not all been independently reviewed.
+
 - https://github.com/Aliothmoon/MaaFwApp
 - https://github.com/DavidAnson/markdownlint-cli2
 - https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
@@ -47,10 +47,6 @@ GitHub：[eli-ovops/game-automation-research](https://github.com/eli-ovops/game-
 - https://github.com/SweetSmellFox/MFAAvalonia
 - https://github.com/aosp-mirror/platform_bionic/blob/c44b1d0676ded732df4b3b21c5f798eacae93228/libc/platform/bionic/tls_defines.h#L86
 
-## 当前状态与验证边界
+</details>
 
-- 本次完成公开副本整理和静态检查；没有运行来源代码、构建 App、安装 Skill 或启动服务。
-- 项目可能处于原型、实验或研究阶段；没有将其表述为生产交付、客户验收或经过验证的投资收益。
-- 图片、视频、数据库、真实账户记录及未确认可公开的附件没有随本次文本/源码副本上传。
-- 部分相对链接、运行依赖或素材可能仍需补齐；原始快照中的静态引用缺口数为 2，该数字不是运行失败数。
-- [本次来源文件清单](SOURCE_MANIFEST.csv)
+[Source paths and hashes](SOURCE_MANIFEST.csv)
